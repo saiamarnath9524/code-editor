@@ -1,0 +1,162 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+    background: linear-gradient(135deg, #1a1a1a, #222831);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+    background: #1e1e1e;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Code Inputs Section */
+.code-section {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
+    flex: 0.6; /* More space for inputs */
+}
+
+/* Individual Code Box */
+.code-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Code Labels */
+label {
+    display: flex;
+    align-items: center;
+    background: #00eaff;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+}
+
+/* Label Icons */
+label img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Styled Textareas with Resizable Feature */
+textarea {
+    width: 100%;
+    height: 250px;
+    background: #252525;
+    color: #ff6b6b;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    resize: both; /* Allows resizing both horizontally and vertically */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    min-width: 150px;
+    min-height: 100px;
+}
+
+/* Focus Effect */
+textarea:focus {
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+/* Output Section */
+.output-section {
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: #1f1f1f;
+    border-top: 3px solid #00eaff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Animation for Output Section */
+.output-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 234, 255, 0.5);
+}
+
+/* Output Label */
+.output-section label {
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+/* Styled Output Frame */
+iframe {
+    width: 100%;
+    height: 320px;
+    background: white;
+    border: 3px solid #00eaff;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+iframe:hover {
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+    }
+    .code-section {
+        flex-direction: column;
+    }
+    textarea {
+        height: 180px;
+    }
+    iframe {
+        height: 280px;
+    }
+}
